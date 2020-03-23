@@ -1,6 +1,7 @@
 let restify = require('restify');
 let bunyan = require('bunyan');
 let mongoose = require('mongoose');
+require('dotenv').config();
 
 let configDB = require('./config/db.js');
 mongoose.connect(configDB.url);
@@ -84,6 +85,7 @@ server.get('/', function (req, res, next) {
     next();
 });
 
+// make routes folder and all that
 server.post('/login', (req, res, next) => {
     UserData.LoginAUser(req.body)
     .then(result => {
@@ -106,6 +108,6 @@ server.post('/signup', (req, res, next) => {
 /*
  * Server listening ...
  =================================================================== */
-server.listen(_port_, function () {
-    console.log('API is online [production:' + (process.env.NODE_ENV == "production") + ']' );
+server.listen(process.env.PORT, function () {
+    console.log(`API is online ${process.env.PORT} ${process.env.NODE_ENV}`);
 });
