@@ -23,6 +23,6 @@ On the EC2 Container, PM2 was used for keep the app alive both in Production and
 3. PM2
 
 ## Improvements?
-1. Add Unit Tests
-2. Make TypeScript versions
+1. Add Unit Tests - I might use Jest instead of Mocha and Chai.
+2. Make TypeScript versions(?)
 3. Add instructions in each app to get started, and make AWS instances.
