@@ -1,4 +1,4 @@
-# REST API Sample Apps
+# REST NodeJS API Sample Apps
 I've kept these sample apps for a while now, and it's time to make them public! And, also improve them if I even find the time.
 
 Since a lot of the REST API concepts are very similar, especially in the NodeJS way (e.g. Express, Restify, HapiJS, etc.), I figured that I'll make templates for each REST API that I personally like doing to prevent re-creating the wheel, look back and see what I can improve as years go by...The only difference for each template is that they're interfacing different types of Databases.
