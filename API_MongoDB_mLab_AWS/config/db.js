@@ -1,3 +1,3 @@
 module.exports = {
-	url: 'mongodb://rockwell_j_h_68:Gottdbrocks68@ds051953.mlab.com:51953/jb_mongo_testing'
+	url: 'mongodb://<username>:<password>@ds12345.mlab.com:ds12345/db_sample_table'
 };
