@@ -1,5 +1,5 @@
 # REST API Sample Apps
-The main frameworks for the REST API apps is RestifyJS for NodeJS
+The main frameworks for the REST API apps are RestifyJS for NodeJS
 
 In this one repository, there are 3 sample apps. All of them are in RestifyJS for the NodeJS Environment. But there 3 different apps to simulate the different databases that I have experience working with.
 
