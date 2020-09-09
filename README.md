@@ -1,4 +1,7 @@
 # REST API Sample Apps
+I've kept these sample apps for a while now, and it's time to make them public! And, also improve them if I even find the time.
+
+Since a lot of the REST API concepts are very similar, especially in the NodeJS way (e.g. Express, Restify, HapiJS, etc.), I figured that I'll make templates for each REST API that I personally like doing to prevent re-creating the wheel, look back and see what I can improve as years go by...The only difference for each template is that they're interfacing different types of Databases.
 
 In this one repository, there are 3 sample apps. All of them are in RestifyJS for the NodeJS Environment. But there are 3 different apps to simulate the different databases that I have experiences working with.
 
@@ -25,3 +28,5 @@ On the EC2 Container, PM2 was used for keep the apps alive both in Production an
 1. Add Unit Tests - I might use Jest instead of Mocha and Chai.
 2. Make TypeScript versions(?)
 3. Add instructions in each app to get started, and make AWS instances.
+4. Microservices
+5. DevOps
