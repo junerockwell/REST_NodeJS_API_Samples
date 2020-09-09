@@ -14,7 +14,7 @@ The API was hosted on an EC2 Tier and connected to a MongoDB instance on mLab.co
 ## The REST API app
 All 3 of the REST API apps are made in RestifyJS for the NodeJS Envinroment. 
 
-On the EC2 Container, PM2 was used for keep the app alive both in Production and Development.
+On the EC2 Container, PM2 was used for keep the apps alive both in Production and Development.
 
 ## EC2 Container
 1. Linux (the free one!)
