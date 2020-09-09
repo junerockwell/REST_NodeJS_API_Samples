@@ -20,7 +20,7 @@ All 3 of the REST API apps are made in RestifyJS for the NodeJS Envinroment.
 On the EC2 Container, PM2 was used to keep the apps alive both in Production and Development.
 
 ## EC2 Container
-1. Linux (the free one!)
+1. Linux (the Amazon OS version, and the free tier one!)
 2. NodeJS (version 8, at the time, I believe)
 3. PM2
 
