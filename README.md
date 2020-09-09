@@ -30,3 +30,4 @@ On the EC2 Container, PM2 was used to keep the apps alive both in Production and
 3. Add instructions in each app to get started, and make AWS instances.
 4. Microservices
 5. DevOps
+6. JSON Web Token (do I really have to show this, hahah?)
