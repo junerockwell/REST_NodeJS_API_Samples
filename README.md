@@ -14,6 +14,9 @@ The API was hosted on an EC2 Tier while the MSSQL was hosted in an Azure DB Inst
 ## 3. REST API with mLab
 The API was hosted on an EC2 Tier and connected to a MongoDB instance on mLab.com
 
+## 4. REST API with MongoDB Atlas
+This version replaces the `mLab` version because `mLab` is now obsolete. I transferred to MongoDB Atlas as my new playground for MongoDB DBaaS. The updates for this project will reflect the the other versions with MySQL and MSSQL.
+
 ## The REST API app
 All 3 of the REST API apps are made in RestifyJS for the NodeJS Envinroment. 
 
@@ -30,4 +33,4 @@ On the EC2 Container, PM2 was used to keep the apps alive both in Production and
 3. Add instructions in each app to get started, and make AWS instances.
 4. Microservices
 5. DevOps
-6. JSON Web Token (do I really have to show this, hahah?)
+6. JSON Web Token - Added to the REST API with MongoDB Atlas. Will integrate with the other versions soon.
