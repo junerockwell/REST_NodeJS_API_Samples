@@ -15,7 +15,7 @@ The API was hosted on an EC2 Tier while the MSSQL was hosted in an Azure DB Inst
 The API was hosted on an EC2 Tier and connected to a MongoDB instance on mLab.com
 
 ## 4. REST API with MongoDB Atlas
-This version replaces the `mLab` version because `mLab` is now obsolete. I transferred to MongoDB Atlas as my new playground for MongoDB DBaaS. The updates for this project will reflect the the other versions with MySQL and MSSQL.
+This version replaces the `mLab` version because `mLab` is now obsolete. I transferred to MongoDB Atlas as my new playground for MongoDB DBaaS. The updates for this project will reflect the the other versions with MySQL and MSSQL in due time.
 
 ## The REST API app
 All 3 of the REST API apps are made in RestifyJS for the NodeJS Envinroment. 
