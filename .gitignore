@@ -69,7 +69,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-# .env # committing `.env` files in this case for demonstration
+.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
