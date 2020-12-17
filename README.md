@@ -3,7 +3,7 @@ I've kept these sample apps for a while now, and it's time to make them public! 
 
 Since a lot of the REST API concepts are very similar, especially in the NodeJS way (e.g. Express, Restify, HapiJS, etc.), I figured that I'll make templates for each REST API that I personally like doing to prevent re-creating the wheel, look back and see what I can improve as years go by...The only difference for each template is that they're interfacing different types of Databases.
 
-In this one repository, there are 3 sample apps. All of them are in RestifyJS for the NodeJS Environment. But there are 3 different apps to simulate the different databases that I have experiences working with.
+In this one repository, there are 4 sample apps. All of them are in RestifyJS for the NodeJS Environment. But there are 4 different apps to simulate the different databases that I have experiences working with.
 
 ## 1. REST API with MySQL
 The API was hosted on an EC2 Tier while the MySQL was hosted on a Amazon RDS.
@@ -18,7 +18,7 @@ The API was hosted on an EC2 Tier and connected to a MongoDB instance on mLab.co
 This version replaces the `mLab` version because `mLab` is now obsolete. I transferred to MongoDB Atlas as my new playground for MongoDB DBaaS. The updates for this project will reflect the the other versions with MySQL and MSSQL in due time.
 
 ## The REST API app
-All 3 of the REST API apps are made in RestifyJS for the NodeJS Envinroment. 
+All 4 of the REST API apps are made in RestifyJS for the NodeJS Envinroment. 
 
 On the EC2 Container, PM2 was used to keep the apps alive both in Production and Development.
 
