@@ -11,8 +11,8 @@ The API was hosted on an EC2 Tier while the MySQL was hosted on a Amazon RDS.
 ## 2. REST API with MSSQL
 The API was hosted on an EC2 Tier while the MSSQL was hosted in an Azure DB Instance specifically for Microsoft's SQL Server.
 
-## 3. REST API with mLab
-The API was hosted on an EC2 Tier and connected to a MongoDB instance on mLab.com
+## 3. REST API with mLab (now obsolete)
+The API was hosted on an EC2 Tier and connected to a MongoDB instance on mLab.com. The mLab.com DBaaS is now obselete, and this project has been replaced by the MoongoDB Atlas project.
 
 ## 4. REST API with MongoDB Atlas
 This version replaces the `mLab` version because `mLab` is now obsolete. I transferred to MongoDB Atlas as my new playground for MongoDB DBaaS. The updates for this project will reflect the the other versions with MySQL and MSSQL in due time.
