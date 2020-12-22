@@ -41,7 +41,7 @@ module.exports = server => {
         }
     });
 
-    server.get('/note/author/:id', async(req, res, next) => {
+    server.get('/notes/author/:id', async(req, res, next) => {
         try {
             const data = await Note.GetNotesByAuthorId(req.params.id);
             res.send(data.code, data.note);

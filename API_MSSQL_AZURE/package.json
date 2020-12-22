@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "watch:dev": "nodemon server.js",
+    "prod": "pm2 start pm2.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "June Rockwell",
