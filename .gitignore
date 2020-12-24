@@ -105,3 +105,4 @@ dist
 .DS_Store
 API_MongoDB_Atlas/.env
 API_MySQL_AWS/.env
+API_MSSQL_AZURE/.env
