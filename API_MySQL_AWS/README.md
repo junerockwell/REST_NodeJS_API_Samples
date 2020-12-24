@@ -26,3 +26,5 @@ Three instances (or ways) to have a MySQL Database:
 **2. Local using MAMP on MacOS**
 
 **3. Local using XAMPP on Windows**
+
+Once you have your MySQL Database running, simply change the `.env` values for `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_PORT`, and `DB_NAME`.
