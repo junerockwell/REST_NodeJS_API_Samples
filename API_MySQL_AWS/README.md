@@ -1,4 +1,4 @@
-# REST API for AWS with MySQL
+# REST API in AWS with MySQL
 
 At the conception of this sample project, the REST API app was kept alive using PM2 on an AWS EC2. The MySQL was an instance created in AWS RDS.
 
