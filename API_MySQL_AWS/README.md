@@ -3,11 +3,11 @@
 At the conception of this sample project, the REST API app was kept alive using PM2 on an AWS EC2. The MySQL was an instance created in AWS RDS.
 
 ## Tech Highlights
-**MySQL Driver:** The node module [`mysql`](https://github.com/mysqljs/mysql#readme)
+**1. MySQL Driver:** The node module [`mysql`](https://github.com/mysqljs/mysql#readme)
 
-**REST Framework:** Restify
+**2. REST Framework:** Restify
 
-**Authentication:** JsonWebToken
+**3. Authentication:** JsonWebToken
 
 
 **For this latest version:**
