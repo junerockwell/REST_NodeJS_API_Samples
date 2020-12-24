@@ -1,6 +1,6 @@
 # REST API for AWS with MySQL
 
-At the conception of this sample project, the REST API app was kept alive using PM2 on an AWS EC2. The MySQL was an instance created in AWS.
+At the conception of this sample project, the REST API app was kept alive using PM2 on an AWS EC2. The MySQL was an instance created in AWS RDS.
 
 **For this latest version:**
 1. I integrated JWT for API Authentication.
