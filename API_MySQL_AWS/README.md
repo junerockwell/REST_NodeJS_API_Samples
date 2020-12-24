@@ -10,5 +10,7 @@ At the conception of this sample project, the REST API app was kept alive using 
 
 ### Create Database
 **1. Remote MySQL DB on Amazon RDS:** https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
+
 **2. Local using MAMP on MacOS**
+
 **3. Local using XAMPP on Windows**
