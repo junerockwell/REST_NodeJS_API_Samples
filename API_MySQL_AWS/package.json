@@ -4,17 +4,23 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "watch:dev": "nodemon server.js",
+    "prod": "pm2 start pm2.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "June Rockwell",
   "website": "http://junerockwell.com",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "bunyan": "^1.8.12",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "mysql": "^2.16.0",
-    "restify": "^7.2.1"
+    "bcryptjs": "^2.4.3",
+    "bunyan": "^1.8.14",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6",
+    "restify": "^7.2.1",
+    "restify-errors": "^8.0.2",
+    "restify-jwt-community": "^1.1.7",
+    "restify-namespace": "^0.1.1"
   }
 }

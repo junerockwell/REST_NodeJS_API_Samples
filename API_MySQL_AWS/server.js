@@ -1,20 +1,24 @@
-let restify = require('restify');
-let bunyan = require('bunyan');
-
-let _port_ = 3000; // production is 3000
-
-let UserData = require('./MySQLData/UserData/UserData.js');
+require('dotenv').config();
+const restify = require('restify');
+const bunyan = require('bunyan');
+const errors = require('restify-errors');
+const namespace = require('restify-namespace');
+const rJwt = require('restify-jwt-community');
+const db = require('./MySQLData');
 
 let log = bunyan.createLogger({
     name: 'API',
     // level: process.env.LOG_LEVEL || 'info',
     // stream: process.stdout,
-    // serializers: bunyan.stdSerializers
+    serializers: errors.bunyanSerializer.create({
+        topLevelFields: true
+    }),
     streams: [{
         path: './main.log',
         // `type: 'file'` is implied
     }]
 });
+global.logger = log;
 
 let server = restify.createServer({
 	log: log,
@@ -42,8 +46,8 @@ server.use(restify.plugins.throttle({
         }
     }
 }));
-// server.use(restify.CORS());
 
+// server.use(restify.CORS());
 server.use(
   function crossOrigin(req,res,next){
     res.header("Access-Control-Allow-Origin", "*");
@@ -70,38 +74,39 @@ server.use(function slowPoke(req, res, next) {
     setTimeout(next.bind(this), parseInt((process.env.SLEEP_TIME || 0), 10));
 });
 
+server.use(rJwt({ secret: process.env.JWT_SECRET }).unless({ path: ['/auth/login', '/auth/register']}));
 
 /*
- * Routes
+ * Expose the endpoints after successful DB Connection and 
+ * start the app.
  =================================================================== */
-/* Main Route */
-server.get('/', function (req, res, next) {
-    res.send("Connected...");
-    next();
-});
+db.pool.getConnection(err => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    
+    const dbConnectMsg = 'Connected to MySQL Database!';
+    console.log(dbConnectMsg);
+    global.logger.info(dbConnectMsg);
 
-server.post('/login', (req, res, next) => {
-    UserData.LoginAUser(req.body)
-    .then(result => {
-        res.send(result);
+    server.get('/', function (req, res, next) {
+        res.send("Connected...");
+        next();
     });
-    next();
-});
-
-server.post('/signup', (req, res, next) => {
-    UserData.SignUp(req.body)
-    .then(result => {
-        res.send(result);
+    
+    namespace(server, '/auth', () => {
+        require('./routes/auth')(server);
     });
-    next();
+    namespace(server, '/api', () => {
+        require('./routes/note')(server);
+    });
+
+    server.listen(process.env.API_PORT, function () {
+        const appLiveMsg = `API is online ${process.env.API_PORT} ${process.env.ENV}`;
+        console.log(appLiveMsg);
+        global.logger.info(appLiveMsg);
+    });
 });
 
 
-
-
-/*
- * Server listening ...
- =================================================================== */
-server.listen(_port_, function () {
-    console.log('API is online [production:' + (process.env.NODE_ENV == "production") + ']' );
-});
