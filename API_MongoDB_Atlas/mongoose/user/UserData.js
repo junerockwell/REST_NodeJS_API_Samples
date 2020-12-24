@@ -15,7 +15,7 @@ async function UserExists(data) {
 async function CreateNewUser(data) {
 	const exists = await UserExists(data);
 	if (exists) {
-		return new errors.InvalidArgumentError();
+		return { code: new errors.InvalidArgumentError() };
 	}
 	else {
 		const { firstname, lastname, email, password } = data;

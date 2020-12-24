@@ -75,20 +75,14 @@ server.use(function slowPoke(req, res, next) {
 server.use(rJwt({ secret: process.env.JWT_SECRET }).unless({ path: ['/auth/login', '/auth/register']}));
 
 /*
- * Server listening ...
- =================================================================== */
-server.listen(process.env.PORT, () => {
-    mongoose.connect(
-        process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        }
-    );
-});
-
-/*
  * Database Connection
  =================================================================== */
+mongoose.connect(
+    process.env.MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }
+);
 const database = mongoose.connection;
 database.on('error', (err) => {
     global.logger.error(err);
@@ -112,7 +106,9 @@ database.once('open', () => {
         require('./routes/note')(server);
     });
 
-    const connectMsg = `API is online ${process.env.PORT} ${process.env.ENV}`;
-    console.log(connectMsg);
-    // global.logger.info(connectMsg);
+    server.listen(process.env.PORT, () => {
+        const connectMsg = `API is online ${process.env.PORT} ${process.env.ENV}`;
+        console.log(connectMsg);
+        global.logger.info(connectMsg);
+    });
 });
